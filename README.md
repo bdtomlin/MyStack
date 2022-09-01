@@ -1,24 +1,50 @@
-# README
+# The is a demo app for directions and examples of setting up a rails app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
 
-Things you may want to cover:
+In terminal
 
-* Ruby version
+```
+rails new MyStack -d postgresql -css tailwind
+cd MyStack
+```
 
-* System dependencies
+Make sure you're on the latest ruby version and set the .ruby-version file for rbenv.
 
-* Configuration
+in Gemfile
 
-* Database creation
+```
+group :development do
+  gem "rubocop"
+  gem "foreman"
+end
+```
 
-* Database initialization
+In terminal
 
-* How to run the test suite
+```
+bundle
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Add .rubocop.yml
 
-* Deployment instructions
-
-* ...
+```
+require:
+  - rubocop-minitest
+  - rubocop-rails
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+Layout/LineLength:
+  Max: 120
+Style/Documentation:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 20
+Metrics/MethodLength:
+  Max: 16
+Lint/MissingSuper:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+```

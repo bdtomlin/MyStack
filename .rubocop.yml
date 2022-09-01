@@ -1,0 +1,18 @@
+require:
+  - rubocop-minitest
+  - rubocop-rails
+AllCops:
+  TargetRubyVersion: 3.0
+  NewCops: enable
+Layout/LineLength:
+  Max: 120
+Style/Documentation:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 20
+Metrics/MethodLength:
+  Max: 16
+Lint/MissingSuper:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
