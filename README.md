@@ -13,10 +13,13 @@ Make sure you're on the latest ruby version and set the .ruby-version file for r
 
 in Gemfile
 
-```
+```ruby
 group :development do
   gem "rubocop"
+  gem "rubocop-minitest"
+  gem "rubocop-rails"
   gem "foreman"
+  gem "htmlbeautifier"
 end
 ```
 
@@ -48,3 +51,22 @@ Lint/MissingSuper:
 Style/ClassAndModuleChildren:
   Enabled: false
 ```
+
+Create a root page
+
+```
+rails g controller Pages index
+```
+
+Set the root route in routes.rb
+
+```ruby
+  root "pages#index"
+```
+
+Create initial commit and push to github
+
+Then follow each sub-guide
+
+- View Components
+- Authentication

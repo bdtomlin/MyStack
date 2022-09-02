@@ -80,5 +80,10 @@ end
 
 group :development do
   gem "rubocop"
+  gem "rubocop-minitest"
+  gem "rubocop-rails"
   gem "foreman"
+  gem "htmlbeautifier"
 end
+
+gem "view_component"
